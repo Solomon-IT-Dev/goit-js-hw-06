@@ -4,7 +4,7 @@ inputArea.addEventListener('blur', handleInputFocusLost);
 function handleInputFocusLost() {
   if (inputArea.value.length === 0) {
     inputArea.removeAttribute('class');
-  } else if (inputArea.value.length >= Number(inputArea.dataset.length)) {
+  } else if (inputArea.value.length === Number(inputArea.dataset.length)) {
     inputArea.classList.add('valid');
     inputArea.classList.remove('invalid');
   } else {
